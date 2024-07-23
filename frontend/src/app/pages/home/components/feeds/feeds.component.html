@@ -1,0 +1,10 @@
+<nz-tabset 
+    class="feeds__tabs"
+    [(nzSelectedIndex)]="selectedIndex"
+    (nzSelectChange)="handleChangeTab($event)"
+    v-model:activeKey="tabQuery"  
+>
+  <nz-tab *ngFor="let tab in currentTabs"  [nzTitle]="tab.tabName">
+    {{tab.children}}
+  </nz-tab>
+</nz-tabset>
